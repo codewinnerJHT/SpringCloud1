@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.athaitao.ssm.mapper.newsMapper">
+	 <resultMap type="News" id="NewsMap">
+		<id column="id" property="id"/>
+		<result column="title" property="title"/>
+		<result column="publisher" property="publisher"/>
+		<result column="time" property="time"/>
+		<result column="contentone" property="contentone"/>
+		<result column="contenttwo" property="contenttwo"/>
+		<result column="contentthree" property="contentthree"/>
+		<result column="imageurlone" property="imageurlone"/>
+		<result column="imageurltwo" property="imageurltwo"/>
+		<result column="imageurlthree" property="imageurlthree"/>
+		<result column="comment" property="comment"/> 
+		<result column="type" property="type"/>
+	</resultMap>
+	
+	<!-- List<News> selectnews(@Param("type")String type); -->
+	<select id="selectnews" resultMap="NewsMap">
+		select * from news where type=#{type}
+	</select>
+</mapper>

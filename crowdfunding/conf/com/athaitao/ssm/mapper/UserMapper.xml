@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.athaitao.ssm.mapper.UserMapper">
+	<resultMap type="User" id="userMap">
+		<id column="id" property="id"/>
+		<result column="loginacct" property="loginacct"/>
+		<result column="userpswd" property="userpswd"/>
+		<result column="username" property="username"/>
+		<result column="accttype" property="accttype"/>
+		<result column="address" property="address"/>
+	</resultMap>
+	
+	<!-- List<User> login(String username,String userpswd); -->
+	<select id="login" resultType="User">
+		select * from user where username=#{username} and userpswd=#{userpswd}
+	</select>
+	
+	<!-- String register(@Param("loginacct")String loginacct,@Param("username") String username, @Param("userpswd")String userpswd); -->
+	<insert id="register">
+	insert into user(loginacct,username,userpswd,accttype,address)
+	values(#{loginacct},#{username},#{userpswd},"0","中国")
+	</insert>
+	<!-- Integer updatepswd(@Param("newloginacct")String newloginacct,@Param("newpassword") String newpassword); -->
+	<update id="updatepswd">
+		update user set userpswd=#{newpassword} where loginacct=#{newloginacct}
+	</update>
+</mapper>
