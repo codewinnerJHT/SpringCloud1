@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: cloud-eureka-user-restTemplate
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: haitao
+Implementation-Vendor-Id: com..athaitao.springcloud
+Build-Jdk: 1.8.0_144
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/cloud-eureka-user-restTemplate
+Created-By: Maven Integration for Eclipse
+
