@@ -14,6 +14,7 @@
 	<groupId>com..athaitao.springcloud</groupId>
 	<artifactId>cloud-eureka-registry-center</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
 	<name>cloud-eureka-registry-center</name>
 	<description>注册中心-用于管理所有的服务（服务发现和注册）</description>
 
